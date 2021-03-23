@@ -57,9 +57,9 @@
               Designed for Growth
             </h2>
             <p class="mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              recusandae, labore nisi corporis reprehenderit dolorem quidem
-              nobis non maiores amet, porro at ratione! Perspiciatis, placeat!
+              Chargebee gives you the freedom to deploy the right growth
+              strategies, while automating everything else in your
+              order-to-revenue workflow.
             </p>
             <div class="d-flex flex-column flex-lg-row mb-5">
               <nuxt-link to="#" class="btn btn--primary mb-3 mb-lg-0 mr-lg-3"
@@ -95,9 +95,9 @@
                 What does this challenge make possible
               </h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-                suscipit exercitationem commodi, odio optio ab distinctio
-                reprehenderit, quibusdam dicta numquam.
+                A changing world requires an evolving business strategy.
+                Chargebee lets you adapt business models and deploy strategies
+                as fast as you can think of them.
               </p>
             </div>
           </div>
@@ -117,9 +117,9 @@
                 Streamline Your Entire RevOps Workflow
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis voluptatum esse impedit quaerat at nostrum suscipit?
-                Distinctio, dolorem.
+                The next big revenue opportunity need not be familiar. Chargebee
+                gives you the infrastructure to discover and turn every revenue
+                potential into a business outcome.
               </p>
             </div>
           </div>
@@ -144,8 +144,9 @@
                         Lifecycle
                       </h6>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vitae, minima?
+                        Collect recurring payments and automate your
+                        subscription billing logic - from checkout to
+                        reconciliation.
                       </p>
                       <nuxt-link to="#" class="btn btn--link"
                         >Biling Exprience</nuxt-link
@@ -212,8 +213,8 @@
                 Scale Your Revenue Stack for Each Stage of Growth
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eveniet, cupiditate aspernatur assumenda totam architecto autem.
+                Upgrade finance, accounting, CRM, and more on the revenue engine
+                that scales with you.
               </p>
               <nuxt-link to="#" class="btn btn--link"
                 >Entinsible Plathform</nuxt-link
@@ -229,13 +230,14 @@
           <div class="col">
             <b-tabs class="testimonial" content-class="mt-3">
               <b-tab title="Rethink Pricing" active>
-                <div class="testimonial-item">
+                <div
+                  class="testimonial-item text-center text-lg-left mt-lg-4 px-3 py-5"
+                >
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-lg-9">
-                        <h2 class="font-bold color-purple mb-3">
-                          Achived 20x ROI <br />
-                          with Chargebee
+                      <div class="col-lg-9 order-2 order-lg-1">
+                        <h2 class="testimonial-item__title mb-3">
+                          Achived 20x ROI with Chargebee
                         </h2>
                         <p class="testimonial-item__desc">
                           Chargebee has all the concepts of metered billing,
@@ -247,7 +249,9 @@
                           >Read Case Study</nuxt-link
                         >
                       </div>
-                      <div class="col-lg-3 d-flex justify-content-end">
+                      <div
+                        class="col-lg-3 order-1 order-lg-2 d-flex justify-content-center mb-3"
+                      >
                         <div>
                           <img
                             class="testimonial-item__thumbnail mb-3"
@@ -255,7 +259,7 @@
                             alt=""
                           />
                           <p
-                            class="testimonial-item__author mb-0 text-right color-purple"
+                            class="testimonial-item__author text-lg-right mb-0 color-purple"
                           >
                             Nathan Field, <br />
                             Drawboard
@@ -294,28 +298,30 @@
           <div class="col-lg-4 mb-4 pr-lg-5">
             <h5 class="feature__title font-bold">GAAP Compliant RevRec</h5>
             <p class="mb-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-              neque.
+              Recognize revenue accurately with ASC-606 & IFRS-15 compliant
+              revenue reporting.
             </p>
             <nuxt-link to="#" class="btn btn--link"
               >Entinsible Plathform</nuxt-link
             >
           </div>
           <div class="col-lg-4 mb-4 pr-lg-5">
-            <h5 class="feature__title font-bold">GAAP Compliant RevRec</h5>
+            <h5 class="feature__title font-bold">
+              Collections & Reconciliation
+            </h5>
             <p class="mb-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-              neque.
+              Eliminate manual reconciliation by auto-matching books of accounts
+              with the bank.
             </p>
             <nuxt-link to="#" class="btn btn--link"
               >Entinsible Plathform</nuxt-link
             >
           </div>
           <div class="col-lg-4 mb-4 pr-lg-5">
-            <h5 class="feature__title font-bold">GAAP Compliant RevRec</h5>
+            <h5 class="feature__title font-bold">A/R & DSO Management</h5>
             <p class="mb-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-              neque.
+              Reduce DSO and plug revenue churn proactively with Smart Dunning &
+              Smarter Retries.
             </p>
             <nuxt-link to="#" class="btn btn--link"
               >Entinsible Plathform</nuxt-link
