@@ -14,9 +14,30 @@ h3, h4, h5, h6, .h3, .h4, .h5, .h6{
 }
 
 body{
-     font-family: $font-ibm;
+    font-family: $font-ibm;
+    color: $color-black;
+    line-height: 1.6;
+}
+
+.color-white{
+    color: $color-white;
+}
+.color-black{
     color: $color-black;
 }
+.color-blue{
+    color: $color-blue;
+}
+.color-orange{
+    color: $color-orange;
+}
+.color-darkblue{
+    color: $color-darkblue;
+}
+.color-purple{
+    color: $color-purple;
+}
+
 
 .btn{
     display: inline-block;
@@ -245,20 +266,33 @@ img{
 }
 
 .testimonial-item{
-    padding: 50px;
+    padding: 50px 50px 50px 70px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #0000004d;
+    box-shadow: 0 0 10px #0000001a;
     max-width: 800px;
     margin: auto;
     margin-top: 40px;
-    &__title{
-        color: $color-blue;
-        font-weight: bold;
+    &__author{
+        line-height: 1.4;
+    }
+    &__desc{
+        position: relative;
+        color: $color-lightblue;
+        font-size: 18px;
+        &:before{
+            content: "";
+            position: absolute;
+            left: -60px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: $color-purple url(~assets/images/left-quotes-sign.svg) no-repeat center/20px;
+        }
     }
     &__thumbnail{
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
+        width: 100px;
+        height: 100px;
     }
 }
 

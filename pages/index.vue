@@ -230,28 +230,39 @@
             <b-tabs class="testimonial" content-class="mt-3">
               <b-tab title="Rethink Pricing" active>
                 <div class="testimonial-item">
-                  <h3 class="testimonial-item__title">
-                    Achive 20x ROI <br />
-                    with Chargebee
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quasi dicta alias tempore obcaecati officia beatae
-                    consequatur nam quos deserunt a!
-                  </p>
-                  <nuxt-link to="#" class="btn btn--link"
-                    >Read Case Study</nuxt-link
-                  >
-                  <div>
-                    <img
-                      class="testimonial-item__thumbnail"
-                      src="~/assets/images/nathanfeld-drawboard.png"
-                      alt=""
-                    />
-                    <p>
-                      Nathan Field, <br />
-                      Drawboard
-                    </p>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-9">
+                        <h2 class="font-bold color-purple mb-3">
+                          Achived 20x ROI <br />
+                          with Chargebee
+                        </h2>
+                        <p class="testimonial-item__desc">
+                          Chargebee has all the concepts of metered billing,
+                          flat and tiered pricing. If we deided to change the
+                          way we want to bill or the price structure, it is
+                          accounted for already.
+                        </p>
+                        <nuxt-link to="#" class="btn btn--link"
+                          >Read Case Study</nuxt-link
+                        >
+                      </div>
+                      <div class="col-lg-3 d-flex justify-content-end">
+                        <div>
+                          <img
+                            class="testimonial-item__thumbnail mb-3"
+                            src="~/assets/images/nathanfeld-drawboard.png"
+                            alt=""
+                          />
+                          <p
+                            class="testimonial-item__author mb-0 text-right color-purple"
+                          >
+                            Nathan Field, <br />
+                            Drawboard
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </b-tab>
