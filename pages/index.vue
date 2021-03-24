@@ -48,13 +48,10 @@
         <div class="row">
           <div class="col-lg-5">
             <h2 class="banner__heading banner__heading--1">
-              Subscription <br />
-              Billing & Revenue <br />
-              Operations
+              Subscription Billing & Revenue Operations
             </h2>
             <h2 class="banner__heading banner__heading--2 mb-3">
-              For Businesses <br />
-              Designed for Growth
+              For Businesses Designed for Growth
             </h2>
             <p class="mb-5">
               Chargebee gives you the freedom to deploy the right growth
@@ -88,7 +85,7 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="info">
               <div class="info__title mb-2">Deploy Strategies</div>
               <h3 class="info__heading mb-4">
@@ -102,7 +99,26 @@
             </div>
           </div>
           <div class="col-lg-8">
-            <h2>Slider</h2>
+            <no-ssr placeholder="Loading...">
+              <carousel-3d class="slider3d">
+                <slide :index="0">
+                  <h5>Roll</h5>
+                  <h5>New Pricing</h5>
+                  <p>
+                    Improve value-price fit. Iterate and launch new pricing
+                    structures without the dev effort.
+                  </p>
+                  <nuxt-link to="#" class="btn btn--link"
+                    >Biling Exprience</nuxt-link
+                  >
+                </slide>
+                <slide :index="1"> Slide 2 Content </slide>
+                <slide :index="2"> Slide 3 Content </slide>
+                <slide :index="3"> Slide 4 Content </slide>
+                <slide :index="4"> Slide 5 Content </slide>
+                <slide :index="5"> Slide 6 Content </slide>
+              </carousel-3d>
+            </no-ssr>
           </div>
         </div>
       </div>
@@ -128,7 +144,7 @@
               <b-tab title="Subscription Automation" active>
                 <div class="row">
                   <div
-                    class="col-lg-8 d-flex justify-content-center justify-content-lg-end"
+                    class="col-lg-8 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
                   >
                     <img
                       class="limit-img"
@@ -138,10 +154,8 @@
                   </div>
                   <div class="col-lg-4">
                     <div class="info">
-                      <h6 class="info__heading">
-                        Automate the <br />
-                        Order-to-Revenue <br />
-                        Lifecycle
+                      <h6 class="info__smallheading pr-lg-5">
+                        Automate the Order-to-Revenue Lifecycle
                       </h6>
                       <p>
                         Collect recurring payments and automate your
@@ -170,7 +184,7 @@
       <div class="container">
         <div class="row">
           <div
-            class="col-lg-9 d-flex justify-content-center justify-content-lg-end"
+            class="col-lg-9 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
           >
             <img
               class="limit-img"
@@ -180,7 +194,7 @@
           </div>
           <div class="col-lg-3">
             <div class="info">
-              <h5 class="info__heading">
+              <h5 class="info__smallheading">
                 Evolve your Billing Workflow to Fit Your Business Strategy
               </h5>
               <p>
@@ -199,7 +213,7 @@
       <div class="container">
         <div class="row">
           <div
-            class="col-lg-9 d-flex justify-content-center justify-content-lg-end"
+            class="col-lg-9 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
           >
             <img
               class="limit-img"
@@ -209,7 +223,7 @@
           </div>
           <div class="col-lg-3">
             <div class="info">
-              <h5 class="info__heading">
+              <h5 class="info__smallheading">
                 Scale Your Revenue Stack for Each Stage of Growth
               </h5>
               <p>
@@ -228,7 +242,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <b-tabs class="testimonial" content-class="mt-3">
+            <b-tabs class="testimonial" content-class="mt-4">
               <b-tab title="Rethink Pricing" active>
                 <div
                   class="testimonial-item text-center text-lg-left mt-lg-4 px-3 py-5"
@@ -254,15 +268,14 @@
                       >
                         <div>
                           <img
-                            class="testimonial-item__thumbnail mb-3"
+                            class="testimonial-item__thumbnail mb-3 float-lg-right"
                             src="~/assets/images/nathanfeld-drawboard.png"
                             alt=""
                           />
                           <p
                             class="testimonial-item__author text-lg-right mb-0 color-purple"
                           >
-                            Nathan Field, <br />
-                            Drawboard
+                            Nathan Field, Drawboard
                           </p>
                         </div>
                       </div>
@@ -287,9 +300,8 @@
           <div class="col-lg-5">
             <div class="info">
               <div class="info__title mb-2">For the mordern cfo</div>
-              <h3 class="info__heading mb-5">
-                Spending less time Closing, <br />
-                More time Driving.
+              <h3 class="info__heading mb-4">
+                Spending less time Closing, More time Driving.
               </h3>
             </div>
           </div>
@@ -353,7 +365,23 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    handleScroll() {
+      if (window.pageYOffset > 100) {
+        document.getElementsByClassName('header')[0].classList.add('fixed')
+      } else {
+        document.getElementsByClassName('header')[0].classList.remove('fixed')
+      }
+    },
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+}
 </script>
 
 <style lang="scss" scoped>
