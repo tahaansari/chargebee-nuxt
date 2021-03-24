@@ -368,12 +368,13 @@ img{
 
 .slider3d{
     padding: 60px;
-    overflow-y: visible;
+    overflow: visible!important;
     height: auto!important;
     .carousel-3d-slide{
+        max-width: 260px!important;
         background: #ffffff;
         border: none;
-        box-shadow: 0 0 100px #0000001a;
+        box-shadow: 0 0 60px #0000001a;
         padding: 30px;
     }
 }

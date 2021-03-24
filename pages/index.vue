@@ -100,7 +100,12 @@
           </div>
           <div class="col-lg-8">
             <no-ssr placeholder="Loading...">
-              <carousel-3d class="slider3d">
+              <carousel-3d
+                :perspective="20"
+                :space="400"
+                :display="3"
+                class="slider3d"
+              >
                 <slide :index="0">
                   <h5>Roll</h5>
                   <h5>New Pricing</h5>
