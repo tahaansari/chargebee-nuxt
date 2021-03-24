@@ -37,6 +37,10 @@ body{
 .color-purple{
     color: $color-purple;
 }
+.color-lightblue{
+    color: $color-lightblue;
+}
+
 
 
 
@@ -321,7 +325,7 @@ img{
 }
 
 .testimonial-item{
-    border-radius: 10px;
+    border-radius: 14px;
     box-shadow: 0 0 10px #0000001a;
     max-width: 800px;
     margin: auto;

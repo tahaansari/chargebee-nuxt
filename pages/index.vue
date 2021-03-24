@@ -75,7 +75,7 @@
             <h2 class="banner__heading banner__heading--2 mb-3">
               For Businesses Designed for Growth
             </h2>
-            <p class="mb-5">
+            <p class="mb-5 color-lightblue">
               Chargebee gives you the freedom to deploy the right growth
               strategies, while automating everything else in your
               order-to-revenue workflow.
@@ -87,7 +87,7 @@
               <nuxt-link to="#" class="btn">Sign Up for Free</nuxt-link>
             </div>
             <div>
-              <p>
+              <p class="color-lightblue">
                 Trusted by leading brands to process over $3Bn in recurring
                 revenue
               </p>
@@ -115,7 +115,7 @@
               <h3 class="info__heading mb-4">
                 What does this challenge make possible
               </h3>
-              <p class="mb-0">
+              <p class="mb-0 color-lightblue">
                 A changing world requires an evolving business strategy.
                 Chargebee lets you adapt business models and deploy strategies
                 as fast as you can think of them.
@@ -280,7 +280,7 @@
               <h3 class="info__heading mb-4">
                 Streamline Your Entire RevOps Workflow
               </h3>
-              <p>
+              <p class="color-lightblue">
                 The next big revenue opportunity need not be familiar. Chargebee
                 gives you the infrastructure to discover and turn every revenue
                 potential into a business outcome.
@@ -305,7 +305,7 @@
                       <h6 class="info__smallheading pr-lg-5">
                         Automate the Order-to-Revenue Lifecycle
                       </h6>
-                      <p>
+                      <p class="color-lightblue">
                         Collect recurring payments and automate your
                         subscription billing logic - from checkout to
                         reconciliation.
@@ -333,7 +333,7 @@
                       <h6 class="info__smallheading pr-lg-5">
                         Automate the Order-to-Revenue Lifecycle
                       </h6>
-                      <p>
+                      <p class="color-lightblue">
                         Collect recurring payments and automate your
                         subscription billing logic - from checkout to
                         reconciliation.
@@ -361,7 +361,7 @@
                       <h6 class="info__smallheading pr-lg-5">
                         Automate the Order-to-Revenue Lifecycle
                       </h6>
-                      <p>
+                      <p class="color-lightblue">
                         Collect recurring payments and automate your
                         subscription billing logic - from checkout to
                         reconciliation.
@@ -395,7 +395,7 @@
               <h5 class="info__smallheading">
                 Evolve your Billing Workflow to Fit Your Business Strategy
               </h5>
-              <p>
+              <p class="color-lightblue">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
                 minima?
               </p>
@@ -424,7 +424,7 @@
               <h5 class="info__smallheading">
                 Scale Your Revenue Stack for Each Stage of Growth
               </h5>
-              <p>
+              <p class="color-lightblue">
                 Upgrade finance, accounting, CRM, and more on the revenue engine
                 that scales with you.
               </p>
@@ -643,7 +643,7 @@
 export default {
   data() {
     return {
-      isMenuOpen: true,
+      isMenuOpen: false,
     }
   },
   methods: {
