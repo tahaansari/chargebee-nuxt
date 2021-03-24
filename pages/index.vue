@@ -6,38 +6,60 @@
           <div class="col-6 col-lg-2">
             <img class="logo" src="~/assets/images/logo.svg" alt="" />
           </div>
-          <div class="col-lg-10 d-none d-lg-block">
-            <div class="d-flex align-items-center justify-content-between">
-              <nav class="nav">
-                <ul class="nav__list d-lg-flex">
-                  <li class="px-3">
-                    <nuxt-link to="#"> Product </nuxt-link>
-                  </li>
-                  <li class="px-3">
-                    <nuxt-link to="#"> Pricing </nuxt-link>
-                  </li>
-                  <li class="px-3">
-                    <nuxt-link to="#"> Solutions </nuxt-link>
-                  </li>
-                  <li class="px-3">
-                    <nuxt-link to="#"> Customers </nuxt-link>
-                  </li>
-                  <li class="px-3">
-                    <nuxt-link to="#"> Resources </nuxt-link>
-                  </li>
-                </ul>
-              </nav>
-              <div class="d-flex justify-content-end">
-                <nuxt-link to="#" class="btn btn--noborder mr-3">
-                  Schedule a Demo
-                </nuxt-link>
-                <nuxt-link to="#" class="btn btn--primary"> Log in </nuxt-link>
-              </div>
-            </div>
-          </div>
           <div class="col-6 d-lg-none">
-            <div class="d-flex justify-content-end">
-              <img class="hamburger" src="~/assets/images/menu.svg" alt="" />
+            <div
+              class="hamburger"
+              :class="{ close: isMenuOpen }"
+              @click="isMenuOpen = !isMenuOpen"
+            ></div>
+          </div>
+          <div class="col-lg-10">
+            <div class="menu" :class="{ open: isMenuOpen }">
+              <div
+                class="d-lg-flex align-items-lg-center justify-content-lg-between"
+              >
+                <nav class="nav">
+                  <ul class="nav__list d-lg-flex">
+                    <li class="px-3">
+                      <nuxt-link to="#" class="nav__link"> Product </nuxt-link>
+                    </li>
+                    <li class="px-3">
+                      <nuxt-link to="#" class="nav__link"> Pricing </nuxt-link>
+                    </li>
+                    <li class="px-3">
+                      <nuxt-link to="#" class="nav__link">
+                        Solutions
+                      </nuxt-link>
+                    </li>
+                    <li class="px-3">
+                      <nuxt-link to="#" class="nav__link">
+                        Customers
+                      </nuxt-link>
+                    </li>
+                    <li class="px-3">
+                      <nuxt-link to="#" class="nav__link">
+                        Resources
+                      </nuxt-link>
+                    </li>
+                  </ul>
+                </nav>
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-lg-end p-3 p-lg-0"
+                >
+                  <nuxt-link to="#" class="btn mb-3 mb-lg-0 mr-lg-3 d-lg-none">
+                    Schedule a Demo
+                  </nuxt-link>
+                  <nuxt-link
+                    to="#"
+                    class="btn btn--noborder mb-3 mb-lg-0 mr-lg-3 d-none d-lg-block"
+                  >
+                    Schedule a Demo
+                  </nuxt-link>
+                  <nuxt-link to="#" class="btn btn--primary">
+                    Log in
+                  </nuxt-link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,22 +98,24 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-7 d-none d-lg-block">
-            <h1>Right banner</h1>
+          <div
+            class="col-lg-7 d-none d-lg-flex justify-content-center align-items-center"
+          >
+            <p>Right banner</p>
           </div>
         </div>
       </div>
     </section>
     <section>
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-lg-4">
             <div class="info">
               <div class="info__title mb-2">Deploy Strategies</div>
               <h3 class="info__heading mb-4">
                 What does this challenge make possible
               </h3>
-              <p>
+              <p class="mb-0">
                 A changing world requires an evolving business strategy.
                 Chargebee lets you adapt business models and deploy strategies
                 as fast as you can think of them.
@@ -101,27 +125,146 @@
           <div class="col-lg-8">
             <no-ssr placeholder="Loading...">
               <carousel-3d
+                :inverseScaling="0"
                 :perspective="20"
-                :space="400"
+                :space="320"
                 :display="3"
+                :height="320"
+                :controlsVisible="true"
                 class="slider3d"
               >
                 <slide :index="0">
-                  <h5>Roll</h5>
-                  <h5>New Pricing</h5>
-                  <p>
-                    Improve value-price fit. Iterate and launch new pricing
-                    structures without the dev effort.
-                  </p>
-                  <nuxt-link to="#" class="btn btn--link"
-                    >Biling Exprience</nuxt-link
-                  >
+                  <div class="slider3d__item">
+                    <div class="text-right">
+                      <img
+                        src="~/assets/images/crack-new-segments.svg"
+                        class="slider3d__icon"
+                        alt=""
+                      />
+                    </div>
+                    <h5 class="slider3d__title slider3d__title--text1 mb-0">
+                      Roll
+                    </h5>
+                    <h5 class="slider3d__title">New Pricing</h5>
+                    <p>
+                      Improve value-price fit. Iterate and launch new pricing
+                      structures without the dev effort.
+                    </p>
+                    <nuxt-link to="#" class="btn btn--link"
+                      >Biling Exprience</nuxt-link
+                    >
+                  </div>
                 </slide>
-                <slide :index="1"> Slide 2 Content </slide>
-                <slide :index="2"> Slide 3 Content </slide>
-                <slide :index="3"> Slide 4 Content </slide>
-                <slide :index="4"> Slide 5 Content </slide>
-                <slide :index="5"> Slide 6 Content </slide>
+                <slide :index="1">
+                  <div class="slider3d__item">
+                    <div class="text-right">
+                      <img
+                        src="~/assets/images/crack-new-segments.svg"
+                        class="slider3d__icon"
+                        alt=""
+                      />
+                    </div>
+                    <h5 class="slider3d__title slider3d__title--text1 mb-0">
+                      Roll
+                    </h5>
+                    <h5 class="slider3d__title">New Pricing</h5>
+                    <p>
+                      Improve value-price fit. Iterate and launch new pricing
+                      structures without the dev effort.
+                    </p>
+                    <nuxt-link to="#" class="btn btn--link"
+                      >Biling Exprience</nuxt-link
+                    >
+                  </div>
+                </slide>
+                <slide :index="2">
+                  <div class="slider3d__item">
+                    <div class="text-right">
+                      <img
+                        src="~/assets/images/crack-new-segments.svg"
+                        class="slider3d__icon"
+                        alt=""
+                      />
+                    </div>
+                    <h5 class="slider3d__title slider3d__title--text1 mb-0">
+                      Roll
+                    </h5>
+                    <h5 class="slider3d__title">New Pricing</h5>
+                    <p>
+                      Improve value-price fit. Iterate and launch new pricing
+                      structures without the dev effort.
+                    </p>
+                    <nuxt-link to="#" class="btn btn--link"
+                      >Biling Exprience</nuxt-link
+                    >
+                  </div>
+                </slide>
+                <slide :index="3">
+                  <div class="slider3d__item">
+                    <div class="text-right">
+                      <img
+                        src="~/assets/images/crack-new-segments.svg"
+                        class="slider3d__icon"
+                        alt=""
+                      />
+                    </div>
+                    <h5 class="slider3d__title slider3d__title--text1 mb-0">
+                      Roll
+                    </h5>
+                    <h5 class="slider3d__title">New Pricing</h5>
+                    <p>
+                      Improve value-price fit. Iterate and launch new pricing
+                      structures without the dev effort.
+                    </p>
+                    <nuxt-link to="#" class="btn btn--link"
+                      >Biling Exprience</nuxt-link
+                    >
+                  </div>
+                </slide>
+                <slide :index="4">
+                  <div class="slider3d__item">
+                    <div class="text-right">
+                      <img
+                        src="~/assets/images/crack-new-segments.svg"
+                        class="slider3d__icon"
+                        alt=""
+                      />
+                    </div>
+                    <h5 class="slider3d__title slider3d__title--text1 mb-0">
+                      Roll
+                    </h5>
+                    <h5 class="slider3d__title">New Pricing</h5>
+                    <p>
+                      Improve value-price fit. Iterate and launch new pricing
+                      structures without the dev effort.
+                    </p>
+                    <nuxt-link to="#" class="btn btn--link"
+                      >Biling Exprience</nuxt-link
+                    >
+                  </div>
+                </slide>
+                <slide :index="5">
+                  <div class="slider3d__item">
+                    <div class="text-right">
+                      <img
+                        src="~/assets/images/crack-new-segments.svg"
+                        class="slider3d__icon"
+                        alt=""
+                      />
+                    </div>
+                    <h5 class="slider3d__title slider3d__title--text1 mb-0">
+                      Roll
+                    </h5>
+                    <h5 class="slider3d__title">New Pricing</h5>
+                    <p>
+                      Improve value-price fit. Iterate and launch new pricing
+                      structures without the dev effort.
+                    </p>
+                    <nuxt-link to="#" class="btn btn--link"
+                      >Biling Exprience</nuxt-link
+                    >
+                  </div>
+                </slide>
               </carousel-3d>
             </no-ssr>
           </div>
@@ -175,10 +318,60 @@
                 </div>
               </b-tab>
               <b-tab title="Billing Experiments">
-                <p>Billing Experiments</p>
+                <div class="row">
+                  <div
+                    class="col-lg-8 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
+                  >
+                    <img
+                      class="limit-img"
+                      src="~/assets/images/subscription-automation.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="info">
+                      <h6 class="info__smallheading pr-lg-5">
+                        Automate the Order-to-Revenue Lifecycle
+                      </h6>
+                      <p>
+                        Collect recurring payments and automate your
+                        subscription billing logic - from checkout to
+                        reconciliation.
+                      </p>
+                      <nuxt-link to="#" class="btn btn--link"
+                        >Biling Exprience</nuxt-link
+                      >
+                    </div>
+                  </div>
+                </div>
               </b-tab>
               <b-tab title="Extensible Plathform">
-                <p>Extensible Plathform</p>
+                <div class="row">
+                  <div
+                    class="col-lg-8 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0"
+                  >
+                    <img
+                      class="limit-img"
+                      src="~/assets/images/subscription-automation.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="info">
+                      <h6 class="info__smallheading pr-lg-5">
+                        Automate the Order-to-Revenue Lifecycle
+                      </h6>
+                      <p>
+                        Collect recurring payments and automate your
+                        subscription billing logic - from checkout to
+                        reconciliation.
+                      </p>
+                      <nuxt-link to="#" class="btn btn--link"
+                        >Biling Exprience</nuxt-link
+                      >
+                    </div>
+                  </div>
+                </div>
               </b-tab>
             </b-tabs>
           </div>
@@ -278,9 +471,10 @@
                             alt=""
                           />
                           <p
-                            class="testimonial-item__author text-lg-right mb-0 color-purple"
+                            class="testimonial-item__author text-center mb-0 color-purple"
                           >
-                            Nathan Field, Drawboard
+                            Nathan Field, <br />
+                            Drawboard
                           </p>
                         </div>
                       </div>
@@ -289,10 +483,86 @@
                 </div>
               </b-tab>
               <b-tab title="Automate Finops">
-                <p>Automate Finops</p>
+                <div
+                  class="testimonial-item text-center text-lg-left mt-lg-4 px-3 py-5"
+                >
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-9 order-2 order-lg-1">
+                        <h2 class="testimonial-item__title mb-3">
+                          Achived 20x ROI with Chargebee
+                        </h2>
+                        <p class="testimonial-item__desc">
+                          Chargebee has all the concepts of metered billing,
+                          flat and tiered pricing. If we deided to change the
+                          way we want to bill or the price structure, it is
+                          accounted for already.
+                        </p>
+                        <nuxt-link to="#" class="btn btn--link"
+                          >Read Case Study</nuxt-link
+                        >
+                      </div>
+                      <div
+                        class="col-lg-3 order-1 order-lg-2 d-flex justify-content-center mb-3"
+                      >
+                        <div>
+                          <img
+                            class="testimonial-item__thumbnail mb-3 float-lg-right"
+                            src="~/assets/images/ayushpatel-fishburners.png"
+                            alt=""
+                          />
+                          <p
+                            class="testimonial-item__author text-center mb-0 color-purple"
+                          >
+                            Ayushpatel, <br />
+                            Fishburners
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </b-tab>
               <b-tab title="Go Global">
-                <p>Go Global</p>
+                <div
+                  class="testimonial-item text-center text-lg-left mt-lg-4 px-3 py-5"
+                >
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-9 order-2 order-lg-1">
+                        <h2 class="testimonial-item__title mb-3">
+                          Achived 20x ROI with Chargebee
+                        </h2>
+                        <p class="testimonial-item__desc">
+                          Chargebee has all the concepts of metered billing,
+                          flat and tiered pricing. If we deided to change the
+                          way we want to bill or the price structure, it is
+                          accounted for already.
+                        </p>
+                        <nuxt-link to="#" class="btn btn--link"
+                          >Read Case Study</nuxt-link
+                        >
+                      </div>
+                      <div
+                        class="col-lg-3 order-1 order-lg-2 d-flex justify-content-center mb-3"
+                      >
+                        <div>
+                          <img
+                            class="testimonial-item__thumbnail mb-3 float-lg-right"
+                            src="~/assets/images/valentin-huang.png"
+                            alt=""
+                          />
+                          <p
+                            class="testimonial-item__author text-center mb-0 color-purple"
+                          >
+                            Valentin, <br />
+                            Huang
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </b-tab>
             </b-tabs>
           </div>
@@ -371,6 +641,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isMenuOpen: true,
+    }
+  },
   methods: {
     handleScroll() {
       if (window.pageYOffset > 100) {
